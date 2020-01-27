@@ -8,6 +8,9 @@ namespace TanyaAuto
         {
             Lesson3_Pifagor();
             Lesson3_Cos();
+            Lesson4_1();
+            Lesson4_2_1();
+            Lesson4_2_2();
             Console.ReadKey();
         }
 
@@ -30,7 +33,43 @@ namespace TanyaAuto
             double cos = Math.Cos(90 * Math.PI / 180);
             hypotinuse = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2) - 2 * a * b * cos);
             Console.WriteLine("Hypotinuse:" + hypotinuse);
+        }
+        static void Lesson4_1()
+        {
+            int a, b;
+            Console.WriteLine("Locals:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Guests:");
+            b = Convert.ToInt32(Console.ReadLine());
+            if (a > b)
+                Console.WriteLine("Locals won!!!");
+            else if (a < b)
+                Console.WriteLine("Guests won!!!");
+            else
+                Console.WriteLine("Dead Head!!!");
+
+            Console.ReadKey();
 
         }
+        static void Lesson4_2_1()
+        {
+            int a;
+            Console.WriteLine("Input any numeric value:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(a % 3 == 0 && a % 7 == 0 ? "Multiple of 7 and 3" : "Not multiple of 7 and 3");
+            Console.ReadKey();
+        }
+        static void Lesson4_2_2()
+        {
+            int a;
+            Console.WriteLine("Input any numeric value");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a % 3 == 0 && a % 7 == 0)
+                Console.WriteLine("Multiple of 7 and 3");
+            else
+                Console.WriteLine("Not multiple of 7 and 3");
+            Console.ReadKey();
+        }
+        
     }
 }
