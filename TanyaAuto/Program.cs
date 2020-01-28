@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TanyaAuto
 {
@@ -6,11 +7,15 @@ namespace TanyaAuto
     {
         static void Main(string[] args)
         {
-            Lesson3_Pifagor();
-            Lesson3_Cos();
-            Lesson4_1();
-            Lesson4_2_1();
-            Lesson4_2_2();
+            //Lesson3_Pifagor();
+            //Lesson3_Cos();
+            //Lesson4_1();
+            //Lesson4_2_1();
+            //Lesson4_2_2();
+            //Lesson5_1dimentionalMassive();
+            //Lesson5_1dimentionalMassive_invalidTry();
+            //Lesson5_multiDimentionalMassive();
+            Lesson5_List();
             Console.ReadKey();
         }
 
@@ -82,6 +87,72 @@ namespace TanyaAuto
             else
                 Console.WriteLine("Not multiple of 7 and 3");
             Console.ReadKey();
+        }
+
+        static void Lesson5_1dimentionalMassive()
+        {
+            int[] dates = new int[4]; 
+            dates[0]=1;
+            dates[1]=5;
+            dates[2]=25;
+            dates[3]=30;
+            string[] weekdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+            
+            Console.WriteLine("Input a number for date");
+
+            int indexDates = Convert.ToInt32(Console.ReadLine());
+            
+            if (indexDates < 0 || indexDates > 3)
+                Console.WriteLine("The date has limit from 0 to 3");
+            else 
+                Console.WriteLine("Date:" + dates[indexDates]);
+            
+            Console.WriteLine("Input a number for day");
+            int indexDays = Convert.ToInt32(Console.ReadLine());
+
+            if (indexDays < 0 || indexDays > 6)
+                Console.WriteLine("The week is limited from 0 to 6");
+            else 
+                Console.WriteLine("Weekday:" + weekdays[indexDays]);
+        }
+
+        static void Lesson5_1dimentionalMassive_invalidTry()
+        {
+            int[] dates = new int[4];
+            dates[0] = 1;
+            dates[1] = 5;
+            dates[2] = 25;
+            dates[3] = 30;
+            string[] weekdays = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+
+            Console.WriteLine("Input a number for date");
+            int indexDates = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Date:" + dates[indexDates]);
+
+            Console.WriteLine("Input a number for day");
+            int indexDays = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Weekday:" + weekdays[indexDays]);
+
+        }
+
+        static void Lesson5_multiDimentionalMassive()
+        {
+            int[,] shopDiscount = new int[2, 2] { { 20, 30 }, {15, 10} };
+        }
+        
+         static void Lesson5_List()
+        {
+            List<string> tlmServices = new List<string>() {"File Manager", "Infrastructure Manager", "Link Manager"};
+            tlmServices.Add("Project Manager");
+            tlmServices.Add("Purchase");
+            tlmServices.Add("TDM");
+            tlmServices.Add("Tool Manager");
+            tlmServices.Add("ToolScout");
+            tlmServices.Insert(4, "Core Service");
+            tlmServices.Remove("Purchase");
+
+            foreach (string tmServ in tlmServices)
+                Console.WriteLine(tmServ);                     
         }
     }
 }
