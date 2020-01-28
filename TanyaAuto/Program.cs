@@ -7,14 +7,14 @@ namespace TanyaAuto
     {
         static void Main(string[] args)
         {
-            //Lesson3_Pifagor();
-            //Lesson3_Cos();
-            //Lesson4_1();
-            //Lesson4_2_1();
-            //Lesson4_2_2();
-            //Lesson5_1dimentionalMassive();
-            //Lesson5_1dimentionalMassive_invalidTry();
-            //Lesson5_multiDimentionalMassive();
+            Lesson3_Pifagor();
+            Lesson3_Cos();
+            Lesson4_1();
+            Lesson4_2_1();
+            Lesson4_2_2();
+            Lesson5_1dimentionalArray();
+            Lesson5_1dimentionalArray_invalidTry();
+            Lesson5_multiDimentionalArray();
             Lesson5_List();
             Console.ReadKey();
         }
@@ -89,7 +89,7 @@ namespace TanyaAuto
             Console.ReadKey();
         }
 
-        static void Lesson5_1dimentionalMassive()
+        static void Lesson5_1dimentionalArray()
         {
             int[] dates = new int[4]; 
             dates[0]=1;
@@ -116,7 +116,7 @@ namespace TanyaAuto
                 Console.WriteLine("Weekday:" + weekdays[indexDays]);
         }
 
-        static void Lesson5_1dimentionalMassive_invalidTry()
+        static void Lesson5_1dimentionalArray_invalidTry()
         {
             int[] dates = new int[4];
             dates[0] = 1;
@@ -135,7 +135,7 @@ namespace TanyaAuto
 
         }
 
-        static void Lesson5_multiDimentionalMassive()
+        static void Lesson5_multiDimentionalArray()
         {
             int[,] shopDiscount = new int[2, 2] { { 20, 30 }, {15, 10} };
         }
