@@ -16,6 +16,7 @@ namespace TanyaAuto
             Lesson5_1dimentionalArray_invalidTry();
             Lesson5_multiDimentionalArray();
             Lesson5_List();
+            Lesson5_2DimentionalArrayWithDiscount();
             Console.ReadKey();
         }
 
@@ -50,7 +51,7 @@ namespace TanyaAuto
                 Console.WriteLine("Goals cannot be negative");
                 return;
             }
-            
+
             Console.WriteLine("Guests:");
             guestGoals = Convert.ToInt32(Console.ReadLine());
             if (guestGoals < 0)
@@ -91,28 +92,28 @@ namespace TanyaAuto
 
         static void Lesson5_1dimentionalArray()
         {
-            int[] dates = new int[4]; 
-            dates[0]=1;
-            dates[1]=5;
-            dates[2]=25;
-            dates[3]=30;
-            string[] weekdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-            
+            int[] dates = new int[4];
+            dates[0] = 1;
+            dates[1] = 5;
+            dates[2] = 25;
+            dates[3] = 30;
+            string[] weekdays = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+
             Console.WriteLine("Input a number for date");
 
             int indexDates = Convert.ToInt32(Console.ReadLine());
-            
+
             if (indexDates < 0 || indexDates > 3)
                 Console.WriteLine("The date has limit from 0 to 3");
-            else 
+            else
                 Console.WriteLine("Date:" + dates[indexDates]);
-            
+
             Console.WriteLine("Input a number for day");
             int indexDays = Convert.ToInt32(Console.ReadLine());
 
             if (indexDays < 0 || indexDays > 6)
                 Console.WriteLine("The week is limited from 0 to 6");
-            else 
+            else
                 Console.WriteLine("Weekday:" + weekdays[indexDays]);
         }
 
@@ -132,27 +133,45 @@ namespace TanyaAuto
             Console.WriteLine("Input a number for day");
             int indexDays = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Weekday:" + weekdays[indexDays]);
-
         }
 
         static void Lesson5_multiDimentionalArray()
         {
-            int[,] shopDiscount = new int[2, 2] { { 20, 30 }, {15, 10} };
+            int[,] shopDiscount = new int[2, 2] { { 20, 30 }, { 15, 10 } };
         }
-        
-         static void Lesson5_List()
+
+        static void Lesson5_List()
         {
-            List<string> tlmServices = new List<string>() {"File Manager", "Infrastructure Manager", "Link Manager"};
+            List<string> tlmServices = new List<string>() { "File Manager", "Infrastructure Manager", "Link Manager" };
             tlmServices.Add("Project Manager");
             tlmServices.Add("Purchase");
             tlmServices.Add("TDM");
             tlmServices.Add("Tool Manager");
             tlmServices.Add("ToolScout");
+
             tlmServices.Insert(4, "Core Service");
             tlmServices.Remove("Purchase");
+                     
+            Console.WriteLine(tlmServices[0]);
+            Console.WriteLine(tlmServices[1]);
+            Console.WriteLine(tlmServices[2]);
+            Console.WriteLine(tlmServices[3]);
+            Console.WriteLine(tlmServices[4]);
+            Console.WriteLine(tlmServices[5]);
+            Console.WriteLine(tlmServices[6]);
+            Console.WriteLine(tlmServices[7]);
+        }
 
-            foreach (string tmServ in tlmServices)
-                Console.WriteLine(tmServ);                     
+        static void Lesson5_2DimentionalArrayWithDiscount()
+        {
+            int[,] shopDiscount = new int[2, 2] { { 20, 30 }, { 15, 10 } };
+            
+            Console.WriteLine("Rewe(1) or Edeka(2)? - ");
+            int indexShops = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Monday(1) or Thursday(2)? - ");
+            int indexDays = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("The discount is   " + shopDiscount[indexShops-1, indexDays-1]);
         }
     }
 }
