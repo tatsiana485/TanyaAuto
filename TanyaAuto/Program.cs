@@ -7,19 +7,20 @@ namespace TanyaAuto
     {
         static void Main(string[] args)
         {
-            Lesson3_Pifagor();
-            Lesson3_Cos();
-            Lesson4_1();
-            Lesson4_2_1();
-            Lesson4_2_2();
-            Lesson5_1dimentionalArray();
-            Lesson5_1dimentionalArray_invalidTry();
-            Lesson5_multiDimentionalArray();
-            Lesson5_List();
-            Lesson5_2DimentionalArrayWithDiscount();
-            Lesson6_Task1();
-            Lesson6_Task2();
-            Lesson6_Task3();
+            //Lesson3_Pifagor();
+            //Lesson3_Cos();
+            //Lesson4_1();
+            //Lesson4_2_1();
+            //Lesson4_2_2();
+            //Lesson5_1dimentionalArray();
+            //Lesson5_1dimentionalArray_invalidTry();
+            //Lesson5_multiDimentionalArray();
+            //Lesson5_List();
+            //Lesson5_2DimentionalArrayWithDiscount();
+            //Lesson6_Task1();
+            //Lesson6_Task2();
+            //Lesson6_Task3();
+            Lesson7();
             Console.ReadKey();
         }
 
@@ -211,6 +212,18 @@ namespace TanyaAuto
             {
                 result[i] = array1[i] + array2[i];
                 Console.WriteLine("Result element: " + result[i]);
+            }
+        }
+
+        static void Lesson7()
+        {
+            int[] array = { 10, 15, 25, 20, 46, 35, 22, 55, 96, 50, 100 };
+
+            foreach (int k in array)
+
+            {
+                if (k >= 20 && k <= 50)
+                    Console.WriteLine("Integer numbers:" + k);
             }
         }
     }
