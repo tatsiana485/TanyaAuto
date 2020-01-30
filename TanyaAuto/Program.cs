@@ -220,10 +220,11 @@ namespace TanyaAuto
             int[] array = { 10, 15, 25, 20, 46, 35, 22, 55, 96, 50, 100 };
 
             foreach (int k in array)
-
             {
                 if (k >= 20 && k <= 50)
+                {
                     Console.WriteLine("Integer numbers:" + k);
+                }    
             }
         }
     }
