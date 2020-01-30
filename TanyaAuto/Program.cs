@@ -17,6 +17,9 @@ namespace TanyaAuto
             Lesson5_multiDimentionalArray();
             Lesson5_List();
             Lesson5_2DimentionalArrayWithDiscount();
+            Lesson6_Task1();
+            Lesson6_Task2();
+            Lesson6_Task3();
             Console.ReadKey();
         }
 
@@ -151,7 +154,7 @@ namespace TanyaAuto
 
             tlmServices.Insert(4, "Core Service");
             tlmServices.Remove("Purchase");
-                     
+
             Console.WriteLine(tlmServices[0]);
             Console.WriteLine(tlmServices[1]);
             Console.WriteLine(tlmServices[2]);
@@ -165,13 +168,50 @@ namespace TanyaAuto
         static void Lesson5_2DimentionalArrayWithDiscount()
         {
             int[,] shopDiscount = new int[2, 2] { { 20, 30 }, { 15, 10 } };
-            
+
             Console.WriteLine("Rewe(1) or Edeka(2)? - ");
             int indexShops = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Monday(1) or Thursday(2)? - ");
             int indexDays = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("The discount is   " + shopDiscount[indexShops-1, indexDays-1]);
+            Console.WriteLine("The discount is   " + shopDiscount[indexShops - 1, indexDays - 1]);
+        }
+
+        static void Lesson6_Task1()
+        {
+            int numbers = 1; 
+            int multiplier = 3;
+
+            for (int i = 1; i <= 20; i++) 
+            {
+                Console.WriteLine(i + ":" + numbers);
+                numbers = numbers + multiplier;
+            }
+        }
+
+        static void Lesson6_Task2()
+        {
+            string password;
+            do
+            {
+                Console.WriteLine("Password, please ");
+                password = Convert.ToString(Console.ReadLine());
+            }
+            while (password != "root");
+            Console.Write("Success!");
+        }
+
+        static void Lesson6_Task3()
+        {
+            int[] array1 = new int[10] { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };          
+            int[] array2 = new int[10] { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+            int[] result = new int[10];
+
+            for (int i = 0; i < result.Length; i++) 
+            {
+                result[i] = array1[i] + array2[i];
+                Console.WriteLine("Result element: " + result[i]);
+            }
         }
     }
 }
