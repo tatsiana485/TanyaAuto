@@ -20,7 +20,10 @@ namespace TanyaAuto
             //Lesson6_Task1();
             //Lesson6_Task2();
             //Lesson6_Task3();
-            Lesson7();
+            //Lesson7();
+            //Lesson8_Task1_Call();
+            //Lesson8_Task2_Call();
+            Lesson8_Task3_Call();
             Console.ReadKey();
         }
 
@@ -180,10 +183,10 @@ namespace TanyaAuto
 
         static void Lesson6_Task1()
         {
-            int numbers = 1; 
+            int numbers = 1;
             int multiplier = 3;
 
-            for (int i = 1; i <= 20; i++) 
+            for (int i = 1; i <= 20; i++)
             {
                 Console.WriteLine(i + ":" + numbers);
                 numbers = numbers + multiplier;
@@ -204,11 +207,11 @@ namespace TanyaAuto
 
         static void Lesson6_Task3()
         {
-            int[] array1 = new int[10] { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };          
+            int[] array1 = new int[10] { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };
             int[] array2 = new int[10] { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
             int[] result = new int[10];
 
-            for (int i = 0; i < result.Length; i++) 
+            for (int i = 0; i < result.Length; i++)
             {
                 result[i] = array1[i] + array2[i];
                 Console.WriteLine("Result element: " + result[i]);
@@ -224,8 +227,93 @@ namespace TanyaAuto
                 if (k >= 20 && k <= 50)
                 {
                     Console.WriteLine("Integer numbers:" + k);
-                }    
+                }
             }
+        }
+        public static void Lesson8_Task1_Call()
+        {
+            int[] numbers = new int[10];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("Please input array element");
+                numbers[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("Input the number, please: ");
+            int compareTo = Convert.ToInt32(Console.ReadLine());
+
+            int[] result;
+            result = Lesson8_Task1(numbers, compareTo);
+
+            foreach (int el in result)
+            {
+                Console.WriteLine(el);
+            }
+        }
+
+        public static int[] Lesson8_Task1(int[] numbers, int k)
+        {
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] == k)
+                {
+                    numbers[i] = k * (-1);
+                }
+            }
+            return numbers;
+        }
+
+
+        public static void Lesson8_Task2_Call()
+        {
+            int number1;
+            int number2;
+            int number3;
+
+            Console.WriteLine("Input 3 numbers: ");
+            number1 = Convert.ToInt32(Console.ReadLine());
+            number2 = Convert.ToInt32(Console.ReadLine());
+            number3 = Convert.ToInt32(Console.ReadLine());
+
+            if (number1 < number2 && number1 < number3)
+            {
+                Console.WriteLine("The MIN among numbers is:" + number1);
+            }
+            else if (number2 < number3)
+            {
+                Console.WriteLine("The MIN among numbers is:" + number2);
+            }
+            else
+            {
+                Console.WriteLine("The MIN among numbers is:" + number3);
+            }
+        }
+
+        public static int GetFibonachiElement(int index)
+        {
+            int firstElement = 1;
+            int secondElement = 1;
+
+            if (index == 1 || index == 2)
+            { 
+                return firstElement;
+            }
+
+            for (int i = 3; i <= index; i++)
+            {
+                int result = firstElement + secondElement;
+                firstElement = secondElement;
+                secondElement = result;
+            }
+            return secondElement;
+
+        }
+        public static void Lesson8_Task3_Call()
+        {
+            Console.WriteLine("Please input any int number: ");
+            int index = Convert.ToInt32(Console.ReadLine());
+            int result = GetFibonachiElement(index);
+            Console.WriteLine("The Fibonachi element:" + result);
         }
     }
 }
+
