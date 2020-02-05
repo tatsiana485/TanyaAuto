@@ -23,7 +23,10 @@ namespace TanyaAuto
             //Lesson7();
             //Lesson8_Task1_Call();
             //Lesson8_Task2_Call();
-            Lesson8_Task3_Call();
+            //Lesson8_Task3_Call();
+            Lesson9_Task1();
+            Lesson9_Task2();
+            Lesson9_Task3();
             Console.ReadKey();
         }
 
@@ -294,7 +297,7 @@ namespace TanyaAuto
             int secondElement = 1;
 
             if (index == 1 || index == 2)
-            { 
+            {
                 return firstElement;
             }
 
@@ -313,6 +316,33 @@ namespace TanyaAuto
             int index = Convert.ToInt32(Console.ReadLine());
             int result = GetFibonachiElement(index);
             Console.WriteLine("The Fibonachi element:" + result);
+        }
+
+        static void Lesson9_Task1()
+        {
+            string a = "Nikolay prishel k Olegu, a tam escho odin Nikolay s Nikolayom i Olegom";
+            Console.WriteLine(a.Replace("Nikolay", "Oleg"));
+        }
+
+        static void Lesson9_Task2()
+        {
+            string longText = "Today we learnt how to work with string in C#. Main operators and methods, which are used for working with string, were described here.";
+            int indexBegin = longText.IndexOf("Main");
+            int indexEnd = longText.IndexOf(", were");
+            
+            Console.WriteLine(longText.Substring(indexBegin, indexEnd - indexBegin));
+        }
+
+        static void Lesson9_Task3()
+        {
+            string login = "Login1,LOgin2,login3,loGin4";
+            login = login.ToLower();
+            string[] loginArray = login.Split(',');
+
+            foreach (string el in loginArray)
+            {
+                Console.WriteLine(el);
+            }
         }
     }
 }
