@@ -24,9 +24,10 @@ namespace TanyaAuto
             //Lesson8_Task1_Call();
             //Lesson8_Task2_Call();
             //Lesson8_Task3_Call();
-            Lesson9_Task1();
-            Lesson9_Task2();
-            Lesson9_Task3();
+            //Lesson9_Task1();
+            //Lesson9_Task2();
+            //Lesson9_Task3();
+            Lesson10();
             Console.ReadKey();
         }
 
@@ -343,6 +344,27 @@ namespace TanyaAuto
             {
                 Console.WriteLine(el);
             }
+        }
+
+        static void Lesson10()
+        {
+            int[] myIntArray = { 1, 2, 3, 9, 55, 96, 63, 56, 36, 95 };
+            string result = "";
+            
+            try
+            {
+                Console.WriteLine("Input the 1st number:");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Input the 2nd number:");
+                int b = Convert.ToInt32(Console.ReadLine());
+                result = "The result is:" + (myIntArray[a] + myIntArray[b]);
+            }
+            catch (Exception)
+            {
+                result = "error";
+            }
+                Console.WriteLine(result);
+
         }
     }
 }
