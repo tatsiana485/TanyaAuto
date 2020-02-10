@@ -33,7 +33,7 @@ namespace TanyaAuto
             // Lesson10();
            //Lesson11_Task1();
             //Lesson11_Task2();
-            Lesson11_Task3();
+           // Lesson11_Task3();
             Console.ReadKey();
         }
 
