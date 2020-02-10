@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
 
 namespace TanyaAuto
 {
@@ -27,7 +30,10 @@ namespace TanyaAuto
             //Lesson9_Task1();
             //Lesson9_Task2();
             //Lesson9_Task3();
-            Lesson10();
+            // Lesson10();
+           //Lesson11_Task1();
+            //Lesson11_Task2();
+            Lesson11_Task3();
             Console.ReadKey();
         }
 
@@ -330,7 +336,7 @@ namespace TanyaAuto
             string longText = "Today we learnt how to work with string in C#. Main operators and methods, which are used for working with string, were described here.";
             int indexBegin = longText.IndexOf("Main");
             int indexEnd = longText.IndexOf(", were");
-            
+
             Console.WriteLine(longText.Substring(indexBegin, indexEnd - indexBegin));
         }
 
@@ -350,7 +356,7 @@ namespace TanyaAuto
         {
             int[] myIntArray = { 1, 2, 3, 9, 55, 96, 63, 56, 36, 95 };
             string result = "";
-            
+
             try
             {
                 Console.WriteLine("Input the 1st number:");
@@ -363,9 +369,52 @@ namespace TanyaAuto
             {
                 result = "error";
             }
-                Console.WriteLine(result);
+            Console.WriteLine(result);
 
         }
+
+        static void Lesson11_Task1()
+        {
+            FileStream newFile = new FileStream("D:\\training\\AUTOMATION\\numbers.txt", FileMode.Create);
+            StreamWriter writer = new StreamWriter(newFile);
+            for (int i = 1; i < 501; i++)
+            {
+                writer.WriteLine(i + ",");
+            }
+            writer.Close();
+        }
+
+        static void Lesson11_Task2()
+        {
+            StreamWriter write = new StreamWriter("D:\\training\\AUTOMATION\\colors.txt");
+
+            string[] colors = { "red", "green", "black", "white", "blue" };
+            foreach (string el in colors)
+            {
+                write.WriteLine(el);
+            }
+
+            write.Close();
+        }
+
+        static void Lesson11_Task3()
+        {
+            FileStream textFile = new FileStream("D:\\training\\AUTOMATION\\sourcetree\\README.md", FileMode.Open);
+            StreamReader reader = new StreamReader(textFile);
+            string readLine = reader.ReadLine();
+            while (reader.EndOfStream == false)
+            {
+                string readNextLine = reader.ReadLine();
+                if (readLine.Length < readNextLine.Length)
+                {
+                    readLine = readNextLine;
+                }
+            }
+            reader.Close();
+            Console.WriteLine("The longest line consists of : " + readLine.Length + " symbols");
+            Console.ReadKey();
+        }
     }
+
 }
 
