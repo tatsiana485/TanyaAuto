@@ -1,16 +1,12 @@
-﻿using System;
-
-namespace TanyaAuto
+﻿namespace TanyaAuto
 {
     class Auto
     {
-        public string manufacturer;
-        public string productionCountry;
-        internal int doorQuantity;
-        public double engine;
+        public string Manufacturer; // field
+        public string ProductionCountry;
+        public double Engine;
+        internal int DoorQuantity;
     }
-
-   
 }
 
         

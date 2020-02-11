@@ -423,19 +423,18 @@ namespace TanyaAuto
             Auto myAuto = new Auto();
             Auto yourAuto = new Auto();
 
-            myAuto.manufacturer = "BMW";
-            myAuto.productionCountry = "Germany";
-            myAuto.engine = 2.0;
-            myAuto.doorQuantity = 5;
-            yourAuto.productionCountry = "Japan";
-            yourAuto.manufacturer = "Mazda";
-            yourAuto.engine = 1.5;
-            yourAuto.doorQuantity = 3;
+            myAuto.Manufacturer = "BMW";
+            myAuto.ProductionCountry = "Germany";
+            myAuto.Engine = 2.0;
+            myAuto.DoorQuantity = 5;
 
-            {
-                Console.WriteLine("My auto main characteristics: produced by " + myAuto.manufacturer + " born in " + myAuto.productionCountry + " and the engine is " + myAuto.engine + " Litres, with " + myAuto.doorQuantity + " doors.");
-                Console.WriteLine("Your auto main characteristics: produced by " + yourAuto.manufacturer + " born in " + yourAuto.productionCountry + " and the engine is " + yourAuto.engine + " Litres, with " + yourAuto.doorQuantity + " doors.");
-            }
+            yourAuto.ProductionCountry = "Japan";
+            yourAuto.Manufacturer = "Mazda";
+            yourAuto.Engine = 1.5;
+            yourAuto.DoorQuantity = 3;
+
+            Console.WriteLine("My auto main characteristics: produced by " + myAuto.Manufacturer + " born in " + myAuto.ProductionCountry + " and the engine is " + myAuto.Engine + " Litres, with " + myAuto.DoorQuantity + " doors.");
+            Console.WriteLine("Your auto main characteristics: produced by " + yourAuto.Manufacturer + " born in " + yourAuto.ProductionCountry + " and the engine is " + yourAuto.Engine + " Litres, with " + yourAuto.DoorQuantity + " doors.");
         }
     }
 }
