@@ -31,9 +31,10 @@ namespace TanyaAuto
             //Lesson9_Task2();
             //Lesson9_Task3();
             // Lesson10();
-           //Lesson11_Task1();
+            //Lesson11_Task1();
             //Lesson11_Task2();
-           // Lesson11_Task3();
+            // Lesson11_Task3();
+            Lesson11_Task3();
             Console.ReadKey();
         }
 
@@ -401,17 +402,19 @@ namespace TanyaAuto
         {
             FileStream textFile = new FileStream("D:\\training\\AUTOMATION\\sourcetree\\README.md", FileMode.Open);
             StreamReader reader = new StreamReader(textFile);
-            string readLine = reader.ReadLine();
+          
+            int maxLength = 0;
+
             while (reader.EndOfStream == false)
             {
-                string readNextLine = reader.ReadLine();
-                if (readLine.Length < readNextLine.Length)
+                string line = reader.ReadLine();
+                if (line.Length > maxLength)
                 {
-                    readLine = readNextLine;
+                  maxLength = line.Length;
                 }
             }
             reader.Close();
-            Console.WriteLine("The longest line consists of : " + readLine.Length + " symbols");
+            Console.WriteLine("The longest line consists of : " + maxLength + " symbols");
             Console.ReadKey();
         }
     }
