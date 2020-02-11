@@ -31,9 +31,10 @@ namespace TanyaAuto
             //Lesson9_Task2();
             //Lesson9_Task3();
             // Lesson10();
-           //Lesson11_Task1();
+            //Lesson11_Task1();
             //Lesson11_Task2();
-           // Lesson11_Task3();
+            // Lesson11_Task3();
+            Lesson13();
             Console.ReadKey();
         }
 
@@ -414,7 +415,33 @@ namespace TanyaAuto
             Console.WriteLine("The longest line consists of : " + readLine.Length + " symbols");
             Console.ReadKey();
         }
-    }
 
+        static void Lesson13()
+        {
+            Auto myAuto = new Auto();
+            Auto yourAuto = new Auto();
+
+            myAuto.manufacturer = "BMW";
+            myAuto.productionCountry = "Germany";
+            myAuto.engine = 2.0;
+            myAuto.doorQuantity = 5;
+            yourAuto.productionCountry = "Japan";
+            yourAuto.manufacturer = "Mazda";
+            yourAuto.engine = 1.5;
+            yourAuto.doorQuantity = 3;
+
+            {
+                Console.WriteLine("My auto main characteristics: produced by " + myAuto.manufacturer + " born in " + myAuto.productionCountry + " and the engine is " + myAuto.engine + " Litres, with " + myAuto.doorQuantity + " doors.");
+                Console.WriteLine("Your auto main characteristics: produced by " + yourAuto.manufacturer + " born in " + yourAuto.productionCountry + " and the engine is " + yourAuto.engine + " Litres, with " + yourAuto.doorQuantity + " doors.");
+            }
+        }
+    }
 }
 
+
+
+        
+
+
+    
+       
