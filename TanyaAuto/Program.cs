@@ -35,8 +35,12 @@ namespace TanyaAuto
             //Lesson11_Task2();
             //Lesson11_Task3();
             //Lesson13();
-            Lesson14();
-            Console.ReadKey();
+            TV tv = new TV();
+            while (true)
+            {
+                Lesson14(tv);
+            }
+            //Console.ReadKey();
         }
 
         static void Lesson3_Pifagor()
@@ -438,28 +442,45 @@ namespace TanyaAuto
             Console.WriteLine("Your auto main characteristics: produced by " + yourAuto.Manufacturer + " born in " + yourAuto.ProductionCountry + " and the engine is " + yourAuto.Engine + " Litres, with " + yourAuto.DoorQuantity + " doors.");
         }
 
-        static void Lesson14()
+        static void Lesson14(TV tv)
         {
-            Console.WriteLine("Please input channel or + for next or - for prev.");
+            Console.WriteLine("Please input channel or + for next or - for prev, ++ for Volume Up and -- for Volume Down and symbol * for mute.");
             string line = Console.ReadLine();
-
-            TV tv = new TV();
 
             if (line == "+")
             {
                 tv.NextChannel();
+                Console.WriteLine("Current channel: " + tv.CurrentChannel);
             }
             else if (line == "-")
             {
                 tv.PrevChannel();
+                Console.WriteLine("Current channel: " + tv.CurrentChannel);
+            }
+            else if (line == "++")
+            {
+                tv.VolumeUp();
+                Console.WriteLine("Volume is: " + tv.Volume);
+            }
+            else if (line == "--")
+            {
+                tv.VolumeDown();
+                Console.WriteLine("Volume is: " + tv.Volume);
+            }
+            else if (line == "*")
+            {
+                tv.SetMute();
+                Console.WriteLine("Mute is:" + tv.Mute);
             }
             else
             {
                 int channel = Convert.ToInt32(line);
                 tv.SetChannel(channel);
-                                
+                Console.WriteLine("Current channel: " + tv.CurrentChannel);
             }
+
         }
+
     }
 }
 
