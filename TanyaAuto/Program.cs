@@ -34,7 +34,8 @@ namespace TanyaAuto
             //Lesson11_Task1();
             //Lesson11_Task2();
             //Lesson11_Task3();
-            Lesson13();
+            //Lesson13();
+            Lesson14();
             Console.ReadKey();
         }
 
@@ -435,6 +436,29 @@ namespace TanyaAuto
 
             Console.WriteLine("My auto main characteristics: produced by " + myAuto.Manufacturer + " born in " + myAuto.ProductionCountry + " and the engine is " + myAuto.Engine + " Litres, with " + myAuto.DoorQuantity + " doors.");
             Console.WriteLine("Your auto main characteristics: produced by " + yourAuto.Manufacturer + " born in " + yourAuto.ProductionCountry + " and the engine is " + yourAuto.Engine + " Litres, with " + yourAuto.DoorQuantity + " doors.");
+        }
+
+        static void Lesson14()
+        {
+            Console.WriteLine("Please input channel or + for next or - for prev.");
+            string line = Console.ReadLine();
+
+            TV tv = new TV();
+
+            if (line == "+")
+            {
+                tv.NextChannel();
+            }
+            else if (line == "-")
+            {
+                tv.PrevChannel();
+            }
+            else
+            {
+                int channel = Convert.ToInt32(line);
+                tv.SetChannel(channel);
+                                
+            }
         }
     }
 }
