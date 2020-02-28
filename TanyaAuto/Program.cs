@@ -35,12 +35,14 @@ namespace TanyaAuto
             //Lesson11_Task2();
             //Lesson11_Task3();
             //Lesson13();
-            TV tv = new TV();
-            while (true)
-            {
-                Lesson14(tv);
-            }
+            //TV tv = new TV();
+            //while (true)
+            //{
+            //    Lesson14(tv);
+            //}
+            Lesson15();
             //Console.ReadKey();
+
         }
 
         static void Lesson3_Pifagor()
@@ -481,6 +483,11 @@ namespace TanyaAuto
 
         }
 
+        static void Lesson15()
+        {
+            Student newStudent = new Student();
+            Student newStudent2 = new Student("Dima", 1, false);
+        }
     }
 }
 
