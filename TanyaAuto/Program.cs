@@ -485,8 +485,21 @@ namespace TanyaAuto
 
         static void Lesson15()
         {
-            Student newStudent = new Student();
-            Student newStudent2 = new Student("Dima", 1, false);
+            Student[] studentArray = new Student[]
+            {
+                new Student(),
+                new Student("Kolya"),
+                new Student("Tanya", 7),
+                new Student("Keren", 9, true)
+            };            
+
+            for (int i = 0; i < studentArray.Length; i++)
+            {
+                Console.Write("The student info: his name is " + studentArray[i].Name);
+                Console.Write(" course is: " + studentArray[i].Course);
+                Console.Write(" scolarship: " + (studentArray[i].Scolarship ? "Yes" : "No"));
+                Console.WriteLine();
+            }
         }
     }
 }

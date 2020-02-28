@@ -17,11 +17,22 @@ namespace TanyaAuto
             Scolarship = true;
         }
 
-        public Student (string Name, int Course, bool Scolarship)
+        public Student (string name, int course, bool scolarship)
         {
-            this.Name = Name;
-            this.Course = Course;
-            this.Scolarship = Scolarship;
+            this.Name = name;
+            this.Course = course;
+            this.Scolarship = scolarship;
+        }
+
+        public Student (string name, int course)
+        {
+            this.Name = name;
+            this.Course = course;
+        }
+
+        public Student (string name)
+        {
+            this.Name = name;
         }
     }
 }
