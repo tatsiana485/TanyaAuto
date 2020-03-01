@@ -40,7 +40,8 @@ namespace TanyaAuto
             //{
             //    Lesson14(tv);
             //}
-            Lesson15();
+            //Lesson15();
+            Lesson16();
             //Console.ReadKey();
 
         }
@@ -500,6 +501,13 @@ namespace TanyaAuto
                 Console.Write(" scolarship: " + (studentArray[i].Scolarship ? "Yes" : "No"));
                 Console.WriteLine();
             }
+        }
+        static void Lesson16()
+        {
+            TVset tv1 = new TVset();
+            tv1.Volume = 0;    
+            Console.WriteLine(tv1.Volume); 
+            Console.ReadKey();
         }
     }
 }
