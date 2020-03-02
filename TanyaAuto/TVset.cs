@@ -6,8 +6,8 @@ namespace TanyaAuto
 {
     class TVset
     {
-        private int volume;
-
+        private int volume = 55;
+        
         public int Volume
         {
             get
@@ -16,9 +16,10 @@ namespace TanyaAuto
             }
             set
             {
-                if (value < 0 || value > 100)
+                if (value >= 0 && value <= 100)
+                {
                     volume = value;
-                else volume = 0;
+                }
             }
         }
     }

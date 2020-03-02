@@ -505,7 +505,9 @@ namespace TanyaAuto
         static void Lesson16()
         {
             TVset tv1 = new TVset();
-            tv1.Volume = 0;    
+            Console.WriteLine("Write any volume value from 0 to 100: ");
+            tv1.Volume = Convert.ToInt32(Console.ReadLine()); 
+                    
             Console.WriteLine(tv1.Volume); 
             Console.ReadKey();
         }
