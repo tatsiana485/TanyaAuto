@@ -41,7 +41,8 @@ namespace TanyaAuto
             //    Lesson14(tv);
             //}
             //Lesson15();
-            Lesson16();
+            //Lesson16();
+            Lesson17();
             //Console.ReadKey();
 
         }
@@ -510,6 +511,15 @@ namespace TanyaAuto
                     
             Console.WriteLine(tv1.Volume); 
             Console.ReadKey();
+        }
+
+        static void Lesson17()
+
+        {
+            Circle circle1 = new Circle(20, 1, 1);
+            circle1.DrawingCircle();
+            Triange triangle1 = new Triange(90, 1, 1);
+            triangle1.DrawingTriangle();
         }
     }
 }
