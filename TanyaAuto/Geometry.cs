@@ -14,30 +14,8 @@ namespace TanyaAuto
             this.y = y;
         }
     }
-    class Circle : Geometry
-    {
-        public int radius { get; set; }
-        public Circle(int radius, int x, int y) : base(x, y)
-        {
-            this.radius = radius;
-        }
-        public void DrawingCircle()
-        {
-            //drawing mechanism ja ne umeju
-        }
-    }
-    class Triange : Geometry
-    {
-        public int angle { get; set; }
-        public Triange(int angle, int x, int y) : base(x, y)
-        {
-            this.angle = angle;
-        }
-        public void DrawingTriangle()
-        {
-            //drawing mechanism ja ne umeju
-        }
-
-    }
+    
 }
+    
+
 

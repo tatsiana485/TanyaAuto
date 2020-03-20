@@ -517,9 +517,21 @@ namespace TanyaAuto
 
         {
             Circle circle1 = new Circle(20, 1, 1);
-            circle1.DrawingCircle();
-            Triange triangle1 = new Triange(90, 1, 1);
-            triangle1.DrawingTriangle();
+           
+            Triangle triangle1 = new Triangle(90, 1, 1);
+
+            {
+                Console.Write("The values for the Circle: " + circle1.Radius + " ; " + circle1.x + " ; " + circle1.y);
+                Console.WriteLine();
+                circle1.DrawingCircle();
+                Console.WriteLine();
+            }
+            {
+                Console.Write("The values for the Triangle: " + triangle1.Angle + " ; " + triangle1.x + " ; " + triangle1.y);
+                Console.WriteLine();
+                triangle1.DrawingTriangle();
+                Console.WriteLine();
+            }
         }
     }
 }
