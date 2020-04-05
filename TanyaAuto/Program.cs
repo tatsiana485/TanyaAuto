@@ -42,7 +42,8 @@ namespace TanyaAuto
             //}
             //Lesson15();
             //Lesson16();
-            Lesson17();
+            //Lesson17();
+            Lesson20();
             //Console.ReadKey();
 
         }
@@ -411,7 +412,7 @@ namespace TanyaAuto
         {
             FileStream textFile = new FileStream("D:\\training\\AUTOMATION\\sourcetree\\README.md", FileMode.Open);
             StreamReader reader = new StreamReader(textFile);
-          
+
             int maxLength = 0;
 
             while (reader.EndOfStream == false)
@@ -419,7 +420,7 @@ namespace TanyaAuto
                 string line = reader.ReadLine();
                 if (line.Length > maxLength)
                 {
-                  maxLength = line.Length;
+                    maxLength = line.Length;
                 }
             }
             reader.Close();
@@ -493,7 +494,7 @@ namespace TanyaAuto
                 new Student("Kolya"),
                 new Student("Tanya", 7),
                 new Student("Keren", 9, true)
-            };            
+            };
 
             for (int i = 0; i < studentArray.Length; i++)
             {
@@ -507,9 +508,9 @@ namespace TanyaAuto
         {
             TVset tv1 = new TVset();
             Console.WriteLine("Write any volume value from 0 to 100: ");
-            tv1.Volume = Convert.ToInt32(Console.ReadLine()); 
-                    
-            Console.WriteLine(tv1.Volume); 
+            tv1.Volume = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(tv1.Volume);
             Console.ReadKey();
         }
 
@@ -517,7 +518,7 @@ namespace TanyaAuto
 
         {
             Circle circle1 = new Circle(20, 1, 1);
-           
+
             Triangle triangle1 = new Triangle(90, 1, 1);
 
             {
@@ -533,8 +534,26 @@ namespace TanyaAuto
                 Console.WriteLine();
             }
         }
+
+        static void Lesson20()
+        {
+            {
+                List<Varrior> varriors = new List<Varrior>();
+                varriors.Add(new Varrior("Valentin", 100));
+                varriors.Add(new VarriorHardDefence("Dmitrij", 55, 35));
+                varriors.Add(new VarriorHardDefence("Manik", 45, 15));
+                varriors.Add(new VarriorLightDefence("Ivan", 88, 10));
+                varriors.Add(new VarriorLightDefence("Tanya", 66, 20));
+
+                foreach (Varrior varrior in varriors)
+                    varrior.Received_Damage();
+
+                Console.ReadKey();
+            }
+        }
     }
 }
+
 
 
 
