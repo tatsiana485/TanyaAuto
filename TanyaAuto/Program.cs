@@ -537,22 +537,30 @@ namespace TanyaAuto
 
         static void Lesson20()
         {
+                                         
             {
-                List<Varrior> varriors = new List<Varrior>();
-                varriors.Add(new Varrior("Valentin", 100));
-                varriors.Add(new VarriorHardDefence("Dmitrij", 55, 35));
-                varriors.Add(new VarriorHardDefence("Manik", 45, 15));
-                varriors.Add(new VarriorLightDefence("Ivan", 88, 10));
-                varriors.Add(new VarriorLightDefence("Tanya", 66, 20));
+                List<Warrior> Warriors = new List<Warrior>();
+                Warriors.Add(new Warrior("Valentin", 100));
+                Warriors.Add(new WarriorHardDefence("Dmitrij", 55));
+                Warriors.Add(new WarriorHardDefence("Manik", 45));
+                Warriors.Add(new WarriorLightDefence("Ivan", 88));
+                Warriors.Add(new WarriorLightDefence("Tanya", 66));
 
-                foreach (Varrior varrior in varriors)
-                    varrior.Received_Damage();
+                foreach (var w in Warriors) 
+                {
+                    Console.WriteLine("Name: " + w.Name + " //"+ " Lives Number: " + w.Health + " //" + " Hit the warrior: ");
+                    int damage = Convert.ToInt32(Console.ReadLine());
+                    w.GetDamage(damage);
+                    Console.WriteLine("Remained: " + w.Health);
+                }
+                                                                                                                                                                                                                        
 
-                Console.ReadKey();
             }
         }
     }
 }
+        
+
 
 
 
