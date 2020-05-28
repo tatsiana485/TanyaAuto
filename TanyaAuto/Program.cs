@@ -43,7 +43,8 @@ namespace TanyaAuto
             //Lesson15();
             //Lesson16();
             //Lesson17();
-            Lesson20();
+            //Lesson20();
+            Lesson21();
             //Console.ReadKey();
 
         }
@@ -551,10 +552,30 @@ namespace TanyaAuto
                     Console.WriteLine("Name: " + w.Name + " //"+ " Lives Number: " + w.Health + " //" + " Hit the warrior: ");
                     int damage = Convert.ToInt32(Console.ReadLine());
                     w.GetDamage(damage);
-                    Console.WriteLine("Remained: " + w.Health);
+                    Console.WriteLine("Remained: " + w.Health + "//" + " Still alive? - " + w.IsAlive);
                 }
                                                                                                                                                                                                                         
 
+            }
+        }
+        static void Lesson21()
+        {
+       
+            {
+                List<Human> humans = new List<Human>();
+                humans.Add(new German("Manik"));
+                humans.Add(new Chinese("Ling"));
+                humans.Add(new Russian("Dima"));
+                humans.Add(new Chinese("Ming"));
+                humans.Add(new German("Keren"));
+                humans.Add(new Russian("Tanya"));
+
+
+
+                foreach (var h in humans)
+                    h.SayHello();
+
+                Console.ReadKey();
             }
         }
     }
