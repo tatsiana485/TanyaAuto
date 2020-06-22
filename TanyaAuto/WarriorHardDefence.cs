@@ -28,7 +28,6 @@ namespace TanyaAuto
             {
                 warriorHealth = 0;
             }
-
         }
     }
 }
