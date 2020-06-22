@@ -8,30 +8,31 @@ namespace TanyaAuto
    
     {
         public int GetDamageHard { get; set; }
-        public float RatioHard = 0.5f;
+        public float ratioHard = 0.5f;
 
         public WarriorHardDefence(string name, int health) : base(name, health)
         {
         }
-        public override void GetDamage(int damage)
+        public override void getDamage(int damage)
         {
-            Health = Health - (int)(damage * RatioHard);
-            if (Health > 0)
+            warriorHealth = warriorHealth - (int)(damage * ratioHard);
+            if (warriorHealth > 0)
             {
-                IsAlive = true;
+                isAlive = true;
             }
             else
             {
-                IsAlive = false;
+                isAlive = false;
             }
-            if (Health < 0)
+            if (warriorHealth < 0)
             {
-                Health = 0;
+                warriorHealth = 0;
             }
 
         }
     }
 }
+
 
     
 

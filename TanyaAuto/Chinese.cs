@@ -4,22 +4,16 @@ using System.Text;
 
 namespace TanyaAuto
 {
-    class Chinese : Human
-        
+    class Chinese : Human        
     {
-        
         public Chinese (string name)
         {
-            Name = name;
-            Hello = "Komichiva";
-
+            humanName = name;
+            hello = "Nihao";
         }
-        public override void SayHello()
+        public override void sayHello()
         {
-            Console.WriteLine("Name: " + Name + "// " + "Greeting is: " + Hello);
+            Console.WriteLine("Name: " + humanName + "// " + "Greeting is: " + hello);
         }
-
     }
-    
-    
 }

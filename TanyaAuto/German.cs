@@ -5,18 +5,15 @@ using System.Text;
 namespace TanyaAuto
 {
     class German : Human
-
     {
         public German(string name)
-            {
-                Name = name;
-                Hello = "Hallo";
-                
-            }
-            public override void SayHello() 
-            {
-            Console.WriteLine("Name: " + Name + "// " + "Greeting is: " + Hello);
-            }
-
+        {
+            humanName = name;
+            hello = "Hallo";
+        }
+        public override void sayHello() 
+        {
+            Console.WriteLine("Name: " + humanName + "// " + "Greeting is: " + hello);
+        }
     }
 }

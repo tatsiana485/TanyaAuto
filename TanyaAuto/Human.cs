@@ -6,10 +6,9 @@ namespace TanyaAuto
 {
     abstract class Human
     {
-        public string Name { get; set; }
-        public string Hello { get; protected set; }
-
-        public abstract void SayHello();
+        public string humanName { get; set; }
+        public string hello { get; protected set; }
+        public abstract void sayHello();
        
     }
 }

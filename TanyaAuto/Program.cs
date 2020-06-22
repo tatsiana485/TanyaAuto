@@ -43,8 +43,8 @@ namespace TanyaAuto
             //Lesson15();
             //Lesson16();
             //Lesson17();
-            //Lesson20();
-            Lesson21();
+            Lesson20();
+            //Lesson21();
             //Console.ReadKey();
 
         }
@@ -549,10 +549,10 @@ namespace TanyaAuto
 
                 foreach (var w in Warriors) 
                 {
-                    Console.WriteLine("Name: " + w.Name + " //"+ " Lives Number: " + w.Health + " //" + " Hit the warrior: ");
+                    Console.WriteLine("Name: " + w.warriorName + " //"+ " Lives Number: " + w.warriorHealth + " //" + " Hit the warrior: ");
                     int damage = Convert.ToInt32(Console.ReadLine());
-                    w.GetDamage(damage);
-                    Console.WriteLine("Remained: " + w.Health + "//" + " Still alive? - " + w.IsAlive);
+                    w.getDamage(damage);
+                    Console.WriteLine("Remained: " + w.warriorHealth + "//" + " Still alive? - " + w.isAlive);
                 }
                                                                                                                                                                                                                         
 
@@ -560,7 +560,6 @@ namespace TanyaAuto
         }
         static void Lesson21()
         {
-       
             {
                 List<Human> humans = new List<Human>();
                 humans.Add(new German("Manik"));
@@ -569,12 +568,9 @@ namespace TanyaAuto
                 humans.Add(new Chinese("Ming"));
                 humans.Add(new German("Keren"));
                 humans.Add(new Russian("Tanya"));
-
-
-
+                               
                 foreach (var h in humans)
-                    h.SayHello();
-
+                    h.sayHello();
                 Console.ReadKey();
             }
         }

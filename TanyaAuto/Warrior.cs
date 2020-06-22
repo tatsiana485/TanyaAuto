@@ -5,42 +5,34 @@ using System.Text;
 namespace TanyaAuto
 {
     class Warrior
-
     {
-        public string Name { get; set; }
-        public int Health { get; set; }
-
-        public bool IsAlive;
-
+        public string warriorName { get; set; }
+        public int warriorHealth { get; set; }
+        
+        public bool isAlive;
 
         public Warrior(string name, int health)
         {
-            Name = name;
-            Health = health;
+            warriorName = name;
+            warriorHealth = health;
         }
 
-        public virtual void GetDamage(int damage)
+        public virtual void getDamage(int damage)
         {
-            Health = Health - damage;
+            warriorHealth = warriorHealth - damage;
 
-            if (Health <= 0)
+            if (warriorHealth <= 0)
             {
-                IsAlive = false;
+                isAlive = false;
             }
             else
             {
-                IsAlive = true;
+                isAlive = true;
             }
-            if (Health < 0)
+            if (warriorHealth < 0)
             {
-                Health = 0;
+                warriorHealth = 0;
             }
-
-
         }
-
-
-    }
-
-        
+    }     
 }

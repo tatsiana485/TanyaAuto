@@ -6,18 +6,15 @@ namespace TanyaAuto
 {
     class Russian : Human
     {
-        
         public Russian(string name)
         {
-            Name = name;
-            Hello = "Privet";
-
+            humanName = name;
+            hello = "Privet";
         }
-        public override void SayHello()
+        public override void sayHello()
         {
-            Console.WriteLine("Name: " + Name + "// " + "Greeting is: " + Hello);
+            Console.WriteLine("Name: " + humanName + "// " + "Greeting is: " + hello);
         }
-
     }
 }
 
