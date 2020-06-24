@@ -43,8 +43,9 @@ namespace TanyaAuto
             //Lesson15();
             //Lesson16();
             //Lesson17();
-            Lesson20();
+            //Lesson20();
             //Lesson21();
+            Lesson22();
             //Console.ReadKey();
 
         }
@@ -538,7 +539,7 @@ namespace TanyaAuto
 
         static void Lesson20()
         {
-                                         
+
             {
                 List<Warrior> Warriors = new List<Warrior>();
                 Warriors.Add(new Warrior("Valentin", 100));
@@ -547,15 +548,13 @@ namespace TanyaAuto
                 Warriors.Add(new WarriorLightDefence("Ivan", 88));
                 Warriors.Add(new WarriorLightDefence("Tanya", 66));
 
-                foreach (var w in Warriors) 
+                foreach (var w in Warriors)
                 {
-                    Console.WriteLine("Name: " + w.warriorName + " //"+ " Lives Number: " + w.warriorHealth + " //" + " Hit the warrior: ");
+                    Console.WriteLine("Name: " + w.warriorName + " //" + " Lives Number: " + w.warriorHealth + " //" + " Hit the warrior: ");
                     int damage = Convert.ToInt32(Console.ReadLine());
                     w.getDamage(damage);
                     Console.WriteLine("Remained: " + w.warriorHealth + "//" + " Still alive? - " + w.isAlive);
                 }
-                                                                                                                                                                                                                        
-
             }
         }
         static void Lesson21()
@@ -568,16 +567,26 @@ namespace TanyaAuto
                 humans.Add(new Chinese("Ming"));
                 humans.Add(new German("Keren"));
                 humans.Add(new Russian("Tanya"));
-                               
+
                 foreach (var h in humans)
                     h.sayHello();
                 Console.ReadKey();
             }
         }
+        static void Lesson22()
+        {
+            List<ISwitchable> machines = new List<ISwitchable>();
+            machines.Add(new ProdMachine());
+            machines.Add(new PresetDevice());
+            foreach (ISwitchable m in machines)
+            {
+                m.SwitchOn();
+                m.SwitchOff();
+            }
+        }
     }
 }
         
-
 
 
 
