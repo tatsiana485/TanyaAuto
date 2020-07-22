@@ -45,7 +45,8 @@ namespace TanyaAuto
             //Lesson17();
             //Lesson20();
             //Lesson21();
-            Lesson22();
+            //Lesson22();
+            Lesson23();
             //Console.ReadKey();
 
         }
@@ -584,8 +585,22 @@ namespace TanyaAuto
                 m.SwitchOff();
             }
         }
+
+        static void Lesson23()
+        { 
+                string[] array = { "Peter", "David", "Ivan", "Olga", "Dmitrii", "Anna", "George", "John"};
+                Names23 N = new Names23();
+                N.name(array);
+                Console.WriteLine("Choose and type any symbol as separator you like:");
+                string a = Convert.ToString(Console.ReadLine());
+                N.name(array, a);
+                Console.ReadKey();
+        }
+                
     }
 }
+    
+
         
 
 
